@@ -1,28 +1,26 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { Mainnet, DAppProvider, Config, Goerli } from '@usedapp/core'
-import { getDefaultProvider } from 'ethers'
+import { Mainnet, DAppProvider, Config, Goerli } from "@usedapp/core";
+import { getDefaultProvider } from "ethers";
 
-import './index.css';
-import HomePage from './pages/HomePage/HomePage';
-import PersonalInfo from './pages/PersonalInfo/PersonalInfo';
+import "./index.css";
+import HomePage from "./pages/HomePage/HomePage";
+import PersonalInfo from "./pages/PersonalInfo/PersonalInfo";
+import Modal from "./components/UI/Modal/Modal";
 
 const config: Config = {
   readOnlyChainId: Mainnet.chainId,
   readOnlyUrls: {
-    [Mainnet.chainId]: getDefaultProvider('mainnet'),
-    [Goerli.chainId]: getDefaultProvider('goerli'),
+    [Mainnet.chainId]: getDefaultProvider("mainnet"),
+    [Goerli.chainId]: getDefaultProvider("goerli"),
   },
-}
+};
 
-const container = document.getElementById('root')!;
+const container = document.getElementById("root")!;
 const root = createRoot(container);
 
 const router = createBrowserRouter([
@@ -32,15 +30,16 @@ const router = createBrowserRouter([
   },
   {
     path: "/user/:id",
-    element: <PersonalInfo />
-  }
+    element: <PersonalInfo />,
+  },
 ]);
 
 root.render(
   <React.StrictMode>
     <DAppProvider config={config}>
       <Provider store={store}>
-          <RouterProvider router={router} />
+        <RouterProvider router={router} />
+        <Modal />
       </Provider>
     </DAppProvider>
   </React.StrictMode>
