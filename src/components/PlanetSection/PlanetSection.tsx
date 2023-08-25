@@ -1,10 +1,8 @@
-import React from "react";
 import Stats from "../UI/Stats/Stats";
 import styles from "./PlanetSection.module.css";
-
 import Planet from "../Planet/Planet";
 
-import ellipsedText from "../../../assets/images/ellipsed_text.png";
+import pln from '../../assets/images/pln.png'
 
 const stats = [
   {
@@ -30,12 +28,13 @@ const PlanetSection = () => {
             EXPLORE YOUR OWN PLANET <br /> IN
             <span className={styles.outlined}> OUR NEW</span> METAVERSE
           </h1>
+
           <Planet />
-          {/* <div className={styles.ellipse}>
+          <div className={styles.ellipse}>
             <div className={styles.ellipse__outlined}>
-              <img className={styles.image} src={planeta} alt="planet" />
+              <img className={styles.image} src={pln} alt="planet" />
             </div>
-          </div> */}
+          </div>
         </div>
         <p className={styles.text}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

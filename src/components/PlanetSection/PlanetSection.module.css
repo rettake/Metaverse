@@ -58,3 +58,10 @@
   line-height: 100%; /* 144px */
   mix-blend-mode: #a23d;
 }
+
+.image {
+  position: absolute;
+  top: -64px;
+  left: 663px;
+  z-index: 200;
+}
