@@ -1,0 +1,41 @@
+.container {
+  min-width: 100%;
+  padding: 16px 0 16px 0;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.firstRow {
+  width: 25%;
+  color: #FFF;
+  font-family: Avenir Next Cyr;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.secondRow {
+  width: 38%;
+  color: #FFF;
+  font-family: Avenir Next Cyr;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.thirdRow {
+  width: 38%;
+  color: #FFF;
+  font-family: Avenir Next Cyr;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}

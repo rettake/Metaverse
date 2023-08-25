@@ -9,7 +9,7 @@ interface IInitialState {
 type IProfile = {
   username: string;
   email: string;
-  address: string;
+  address?: string;
 };
 
 const initialState: IInitialState = {
@@ -31,6 +31,9 @@ const slice = createSlice({
 });
 
 export default slice.reducer;
+
+export const { setProfile } = slice.actions;
+export const { setIsRegister } = slice.actions;
 
 export const selectProfile = (state: RootState) => state.profile;
 export const selectIsRegister = (state: RootState) => state.isRegister;

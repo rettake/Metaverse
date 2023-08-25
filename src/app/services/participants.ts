@@ -8,7 +8,7 @@ interface IParticipant {
 
 export const participantsApi = api.injectEndpoints({
   endpoints: (builder) => ({
-    getAllParticipants: builder.query<IParticipant[], void>({
+    getAllParticipants: builder.query<any, void>({
       query: () => ({
         url: "/data?page=1&perPage=50",
         method: "GET",

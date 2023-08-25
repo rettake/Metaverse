@@ -1,0 +1,38 @@
+.header {
+  min-width: 100%;
+  padding: 16px 0 16px 0;
+  border-bottom: 1px solid #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.firstTitle {
+  width: 25%;
+  color: #FFF;
+  font-family: Bebas Neue;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; 
+}
+
+.secondTitle {
+  width: 38%;
+  color: #FFF;
+  font-family: Bebas Neue;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; 
+}
+
+.thirdTitle {
+  width: 38%;
+  color: #FFF;
+  font-family: Bebas Neue;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; 
+}

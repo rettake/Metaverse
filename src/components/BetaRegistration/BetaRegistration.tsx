@@ -1,22 +1,49 @@
-import { RootState } from "@reduxjs/toolkit/dist/query/core/apiState";
 import { useEthers } from "@usedapp/core";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Button from "../UI/Button/Button";
 import styles from "./BetaRegistration.module.css";
+import { setIsRegister, setProfile } from "../../features/profile/profileSlice";
+import { RootState } from "../../app/store";
+import { FunctionComponent } from "react";
+import TableList from "../UI/TableList/TableList";
 
 type Inputs = {
   name: string;
   email: string;
 };
 
-const BetaRegistration = () => {
+interface IProfile {
+  username: string;
+  email: string;
+  address: string;
+}
+
+interface IProps {
+  items: IProfile[] | null;
+  isLoading: boolean;
+}
+
+const BetaRegistration: FunctionComponent<IProps> = ({ items, isLoading }) => {
+  const dispatch = useDispatch();
+
+  const { profile, isRegister } = useSelector(
+    (state: RootState) => state.profile
+  );
+
   const { account } = useEthers();
 
-  const { profile, isRegister } = useSelector((state: any) => state.profile);
-
   const { register, handleSubmit } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    dispatch(
+      setProfile({
+        username: data.name,
+        email: data.email,
+        address: account,
+      })
+    );
+    dispatch(setIsRegister(true));
+  };
 
   return (
     <section className={styles.section}>
@@ -28,26 +55,59 @@ const BetaRegistration = () => {
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
         </p>
-        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-          <label htmlFor="">Name</label>
-          <input
-            type="text"
-            placeholder="TEXT"
-            {...register("name", { required: true })}
-          />
-          <label htmlFor="">Email</label>
-          <input
-            type="email"
-            placeholder="TEXT"
-            {...register("email", { required: true })}
-          />
-          <Button type="submit" disabled={account ? false : true}>
-            GET EARLY ACCESS
-          </Button>
-        </form>
+        {isRegister ? (
+          <div className={styles.form}>
+            <label htmlFor="">Name</label>
+            <p className={styles.text__info}>{profile?.username}</p>
+            <label htmlFor="">Email</label>
+            <p className={styles.text__info}>{profile?.email}</p>
+            <Button type="submit" disabled>
+              List me to the table
+            </Button>
+          </div>
+        ) : (
+          <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+            <label htmlFor="">Name</label>
+            <input
+              type="text"
+              placeholder="TEXT"
+              {...register("name", { required: true })}
+            />
+            <label htmlFor="">Email</label>
+            <input
+              type="email"
+              placeholder="TEXT"
+              {...register("email", { required: true })}
+            />
+            <Button type="submit" disabled={account ? false : true}>
+              GET EARLY ACCESS
+            </Button>
+          </form>
+        )}
       </div>
       <div>
-        {isRegister ? <h1>Registed!</h1> : <></>}
+        {isRegister ? (
+          <div>
+            <h2
+              style={{
+                color: "white",
+                marginBottom: "35px",
+              }}
+              className={styles.title}
+            >
+              Participation listing (enable only for participants)
+            </h2>
+            {isLoading ? (
+              <h1 style={{ color: "white", textAlign: "center" }}>
+                Loading...
+              </h1>
+            ) : (
+              <TableList profile={profile} items={items} />
+            )}
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
     </section>
   );
