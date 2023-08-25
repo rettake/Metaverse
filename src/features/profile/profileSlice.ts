@@ -33,3 +33,4 @@ const slice = createSlice({
 export default slice.reducer;
 
 export const selectProfile = (state: RootState) => state.profile;
+export const selectIsRegister = (state: RootState) => state.isRegister;

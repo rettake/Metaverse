@@ -1,5 +1,7 @@
+import { RootState } from "@reduxjs/toolkit/dist/query/core/apiState";
 import { useEthers } from "@usedapp/core";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useSelector } from "react-redux";
 import Button from "../UI/Button/Button";
 import styles from "./BetaRegistration.module.css";
 
@@ -11,7 +13,7 @@ type Inputs = {
 const BetaRegistration = () => {
   const { account } = useEthers();
 
-  
+  const { profile, isRegister } = useSelector((state: any) => state.profile);
 
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
@@ -44,7 +46,9 @@ const BetaRegistration = () => {
           </Button>
         </form>
       </div>
-      <div></div>
+      <div>
+        {isRegister ? <h1>Registed!</h1> : <></>}
+      </div>
     </section>
   );
 };
