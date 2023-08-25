@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Avenir Next Cyr';
+  src: url('./AvenirNextCyr-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('./bebas-neue-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}

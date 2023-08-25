@@ -1,0 +1,22 @@
+.button {
+  padding: 10px 24px 6px 24px;
+  color: #FFF;
+  border-radius: 30px;
+  background: #E75626;
+  font-family: Bebas Neue;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 21.6px */
+  transition: all 0.7s linear;
+}
+
+.button:hover {
+  background: #BE3B10;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  background: #E75626;
+}

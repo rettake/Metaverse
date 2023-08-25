@@ -1,0 +1,59 @@
+.section {
+  max-width: 1312px;
+  margin: 0 auto;
+  padding: 48px 0 333px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 136px;
+}
+
+.title {
+  color: #E75626;
+  font-family: Bebas Neue;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  margin-bottom: 18px;
+}
+
+.text {
+  width: 420px;
+  color: #FFF;
+  font-family: Avenir Next Cyr;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 36px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+}
+
+.form label {
+  color: #FFF;
+  font-family: Bebas Neue;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  margin-bottom: 8px;
+}
+
+.form input {
+  padding: 12px 120px 12px 18px;
+  border-radius: 30px;
+  border: 1px solid #FFF;
+  background-color: transparent;
+  color: #FFF;
+  font-family: Avenir Next Cyr;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 18px;
+}

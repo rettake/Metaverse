@@ -1,0 +1,79 @@
+.ellipse {
+  z-index: 0;
+  width: 532px;
+  height: 532px;
+  position: absolute;
+  top: -150px;
+  left: 560px;
+  border-radius: 532px;
+  background: #212124;
+}
+
+.ellipse::after {
+  content: " ";
+  z-index: 1;
+  width: 526px;
+  height: 526px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  border-radius: 526px;
+  background: #171719;
+  filter: blur(11px);
+}
+
+.text__ellipse {
+  z-index: 100;
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  top: -46px;
+  left: 584px;
+  border-radius: 526px;
+  background-image: url('../../assets/images/ellipsed_text.png');
+  visibility: hidden;
+}
+
+.ellipse::before {
+  content: " ";
+  z-index: 2;
+  width: 446px;
+  height: 446px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  border-radius: 446px;
+  background: #1E1E20;
+}
+
+.ellipse__outlined {
+  width: 384px;
+  height: 384px;
+  z-index: 4;
+  position: absolute;
+  left: 71px;
+  top: 71px;
+  border-radius: 384px;
+  border: 1px solid #323232;
+
+}
+.ellipse__outlined::after {
+  content: " ";
+  width: 370px;
+  height: 370px;
+  z-index: 5;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  border-radius: 380px;
+  border: 1px solid #323232;
+}
+
+.image {
+  width: 320px;
+  height: 320px;
+  z-index: 6;
+  position: absolute;
+  left: 32px;
+  top: 32px;
+}
