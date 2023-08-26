@@ -1,7 +1,6 @@
-import React, { FunctionComponent } from "react";
+import { FunctionComponent } from "react";
 import styles from "./ListItem.module.css";
 import closeIcn from "../../../../assets/images/close.svg";
-import { profile } from "console";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../../app/store";
 import { useNavigate } from "react-router";

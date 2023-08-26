@@ -7,6 +7,7 @@ import { setIsRegister, setProfile } from "../../features/profile/profileSlice";
 import { RootState } from "../../app/store";
 import { FunctionComponent } from "react";
 import TableList from "../UI/TableList/TableList";
+import Input from "../UI/Input/Input";
 
 type Inputs = {
   name: string;
@@ -68,15 +69,15 @@ const BetaRegistration: FunctionComponent<IProps> = ({ items, isLoading }) => {
         ) : (
           <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="">Name</label>
-            <input
+            <Input
               type="text"
-              placeholder="TEXT"
+              placeholder="We will display your name in participation list"
               {...register("name", { required: true })}
             />
             <label htmlFor="">Email</label>
-            <input
+            <Input
               type="email"
-              placeholder="TEXT"
+              placeholder="We will display your email in participation list"
               {...register("email", { required: true })}
             />
             <Button type="submit" disabled={account ? false : true}>

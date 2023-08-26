@@ -20,7 +20,7 @@
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: 120%; /* 38.4px */
+  line-height: 120%;
   letter-spacing: 1px;
   text-align: center;
 }
@@ -55,7 +55,7 @@
   font-size: 120px;
   font-style: normal;
   font-weight: 700;
-  line-height: 100%; /* 144px */
+  line-height: 100%;
   mix-blend-mode: #a23d;
 }
 
