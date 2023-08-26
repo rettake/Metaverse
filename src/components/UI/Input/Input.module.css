@@ -21,6 +21,10 @@
   outline: 1px solid #E75626;
 }
 
+.input:focus-visible {
+  background: transparent;
+}
+
 .input:focus::placeholder {
   visibility: hidden;
 }
