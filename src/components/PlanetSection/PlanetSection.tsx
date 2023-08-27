@@ -28,7 +28,7 @@ const PlanetSection = () => {
             EXPLORE YOUR OWN PLANET <br /> IN
             <span className={styles.outlined}> OUR NEW</span> METAVERSE
           </h1>
-          <Planet />
+          <Planet isMainPage={true}/>
           <img className={styles.image} src={pln_svg} alt="planet" />
         </div>
         <p className={styles.text}>

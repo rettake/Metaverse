@@ -21,7 +21,7 @@ const PersonalData: FunctionComponent<IProps> = ({ name, email, wallet }) => {
         </div>
       </div>
       <div className={styles.planet}>
-        <Planet />
+        <Planet isMainPage={false}/>
       </div>
     </section>
   );

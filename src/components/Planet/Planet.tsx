@@ -1,9 +1,13 @@
-import React, { useEffect } from "react";
+import React, { FunctionComponent, useEffect } from "react";
 import styles from "./Planet.module.css";
 import planeta from "../../assets/images/planeta.png";
 import BlockTimer from "./CircleTimer/BlockTimer/BlockTimer";
 
-const Planet = () => {
+interface IProps {
+  isMainPage: boolean;
+}
+
+const Planet: FunctionComponent<IProps> = ({isMainPage}) => {
   useEffect(() => {
     const circle: any = document.querySelector("#circle");
     if (circle) {
@@ -21,7 +25,7 @@ const Planet = () => {
       };
 
       const interval = setInterval(() => {
-        if (++i == step) {
+        if (++i === step) {
           clearInterval(interval);
         } else {
           setProgressBar(step * i);
@@ -33,7 +37,7 @@ const Planet = () => {
   return (
     <div className={styles.ellipse}>
       <div className={styles.blockWithTimer}>
-        <BlockTimer />
+        {isMainPage && <BlockTimer />}
       </div>
       <svg width={"486"} className={styles.timer} height={"486"}>
         <circle
