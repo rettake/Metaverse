@@ -24,17 +24,19 @@ const TableList: FunctionComponent<IProps> = ({ profile, items }) => {
         <h3 className={styles.secondTitle}>EMAIL</h3>
         <h3 className={styles.thirdTitle}>WALLET</h3>
       </div>
-      {list.map((item, index) => (
-        <ListItem
-          id={item.id}
-          onDelete={onDelete}
-          key={item.id}
-          index={index}
-          username={item.username}
-          email={item.email}
-          address={item.address}
-        />
-      ))}
+      <div className={styles.item}>
+        {list.map((item, index) => (
+          <ListItem
+            id={item.id}
+            onDelete={onDelete}
+            key={item.id}
+            index={index}
+            username={item.username}
+            email={item.email}
+            address={item.address}
+          />
+        ))}
+      </div>
     </div>
   );
 };

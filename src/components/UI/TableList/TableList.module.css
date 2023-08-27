@@ -1,3 +1,8 @@
+.item {
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
 .header {
   min-width: 100%;
   padding: 16px 0 16px 0;
@@ -35,4 +40,15 @@
   font-style: normal;
   font-weight: 700;
   line-height: 120%; 
+}
+
+.item::-webkit-scrollbar {
+  width: 3px;
+}
+
+.item::-webkit-scrollbar-thumb {
+  background: #E75626;
+  border-radius: 2px;
+  width: 3px !important;
+  margin-left: 150px !important;
 }
