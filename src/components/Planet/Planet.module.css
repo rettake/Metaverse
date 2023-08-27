@@ -77,3 +77,27 @@
   left: 32px;
   top: 32px;
 }
+
+.timer {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 3;
+  transform: rotate(281deg);
+}
+
+.timer > circle {
+  position: absolute;
+  top: -4.5%;
+  left: -4.5%;
+  z-index: 1;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.blockWithTimer {
+  position: absolute;
+  left: 225px;
+  top: 10px;
+  z-index: 1001;
+}

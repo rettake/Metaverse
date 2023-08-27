@@ -1,0 +1,44 @@
+.outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 15px;
+  background: #FFF;
+  max-width: 80px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 11px;
+}
+
+.text {
+  color: #171719;
+  font-family: Bebas Neue;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.outer_ellipse {
+  width: 12px;
+  height: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: 3px 3px 2px #17171710;
+  border-radius: 50%;
+  margin-bottom: 2px;
+}
+
+.inner_ellipse {
+  width: 6px;
+  height: 6px;
+  background: #E75626;
+  border-radius: 50%;
+}
