@@ -28,13 +28,8 @@ const PlanetSection = () => {
             EXPLORE YOUR OWN PLANET <br /> IN
             <span className={styles.outlined}> OUR NEW</span> METAVERSE
           </h1>
-
           <Planet />
-          <div className={styles.ellipse}>
-            <div className={styles.ellipse__outlined}>
-              <img className={styles.image} src={pln} alt="planet" />
-            </div>
-          </div>
+          <img className={styles.image} src={pln} alt="planet" />
         </div>
         <p className={styles.text}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
