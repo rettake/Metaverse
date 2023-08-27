@@ -3,6 +3,7 @@ import styles from "./PlanetSection.module.css";
 import Planet from "../Planet/Planet";
 
 import pln from '../../assets/images/pln.png'
+import pln_svg from '../../assets/images/planet_text_svg.svg'
 
 const stats = [
   {
@@ -29,7 +30,7 @@ const PlanetSection = () => {
             <span className={styles.outlined}> OUR NEW</span> METAVERSE
           </h1>
           <Planet />
-          <img className={styles.image} src={pln} alt="planet" />
+          <img className={styles.image} src={pln_svg} alt="planet" />
         </div>
         <p className={styles.text}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
