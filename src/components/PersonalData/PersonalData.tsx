@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import Planet from "../Planet/Planet";
+import PersonalListItem from "../UI/PersonalListItem/PersonalListItem";
 import styles from "./PersonalData.module.css";
 
 interface IProps {
@@ -14,18 +15,9 @@ const PersonalData: FunctionComponent<IProps> = ({ name, email, wallet }) => {
       <div>
         <h2 className={styles.title}>PERSONAL DATA</h2>
         <div className={styles.list}>
-          <div className={styles.list__item}>
-            <h3 className={styles.list__title}>NAME</h3>
-            <p className={styles.list__text}>{name}</p>
-          </div>
-          <div className={styles.list__item}>
-            <h3 className={styles.list__title}>EMAIL</h3>
-            <p className={styles.list__text}>{email}</p>
-          </div>
-          <div className={styles.list__item}>
-            <h3 className={styles.list__title}>WALLET</h3>
-            <p className={styles.list__text}>{wallet}</p>
-          </div>
+          <PersonalListItem title='NAME' value={name} />
+          <PersonalListItem title='EMAIL' value={email} />
+          <PersonalListItem title='WALLET' value={wallet} />
         </div>
       </div>
       <div className={styles.planet}>

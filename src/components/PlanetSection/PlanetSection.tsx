@@ -2,7 +2,6 @@ import Stats from "../UI/Stats/Stats";
 import styles from "./PlanetSection.module.css";
 import Planet from "../Planet/Planet";
 
-import pln from '../../assets/images/pln.png'
 import pln_svg from '../../assets/images/planet_text_svg.svg'
 
 const stats = [
