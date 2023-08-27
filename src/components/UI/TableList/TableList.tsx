@@ -1,4 +1,7 @@
 import React, { FunctionComponent, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../../app/store";
+import { setParticipants } from "../../../features/participants/participantsSlice";
 import ListItem from "./ListItem/ListItem";
 import styles from "./TableList.module.css";
 
@@ -7,15 +10,16 @@ interface IProps {
   items: any;
 }
 
-const TableList: FunctionComponent<IProps> = ({ profile, items }) => {
+const TableList: FunctionComponent = () => {
+  const dispatch = useDispatch()
 
-  const [list, setList] = useState([{ id: Date.now(), ...profile }, ...items])
+  const { profiles } = useSelector(
+    (state: RootState) => state.profiles
+  );
 
   const onDelete = () => {
-    setList(list.slice(1))
+    dispatch(setParticipants(profiles.slice(1)))
   };
-
-  console.log(list);
 
   return (
     <div>
@@ -25,7 +29,7 @@ const TableList: FunctionComponent<IProps> = ({ profile, items }) => {
         <h3 className={styles.thirdTitle}>WALLET</h3>
       </div>
       <div className={styles.item}>
-        {list.map((item, index) => (
+        {profiles.map((item, index) => (
           <ListItem
             id={item.id}
             onDelete={onDelete}

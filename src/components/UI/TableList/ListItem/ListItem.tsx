@@ -6,10 +6,10 @@ import { RootState } from "../../../../app/store";
 import { useNavigate } from "react-router";
 
 interface IProps {
-  id: number
+  id?: number
   username: string;
   email: string;
-  address: string;
+  address?: string;
   index: number;
   onDelete: () => void;
 }

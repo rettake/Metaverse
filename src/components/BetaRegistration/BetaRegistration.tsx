@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Button from "../UI/Button/Button";
 import styles from "./BetaRegistration.module.css";
 import { setIsRegister, setProfile } from "../../features/profile/profileSlice";
+import { setParticipants } from "../../features/participants/participantsSlice";
 import { RootState } from "../../app/store";
 import { FunctionComponent } from "react";
 import TableList from "../UI/TableList/TableList";
@@ -21,7 +22,7 @@ interface IProfile {
 }
 
 interface IProps {
-  items: IProfile[] | null;
+  items: IProfile[];
   isLoading: boolean;
 }
 
@@ -41,9 +42,22 @@ const BetaRegistration: FunctionComponent<IProps> = ({ items, isLoading }) => {
         username: data.name,
         email: data.email,
         address: account,
+        id: Date.now(),
       })
     );
     dispatch(setIsRegister(true));
+
+    dispatch(
+      setParticipants([
+        {
+          username: data.name,
+          email: data.email,
+          address: account,
+          id: Date.now(),
+        } as IProfile,
+        ...items,
+      ])
+    );
   };
 
   return (
@@ -103,7 +117,7 @@ const BetaRegistration: FunctionComponent<IProps> = ({ items, isLoading }) => {
                 Loading...
               </h1>
             ) : (
-              <TableList profile={profile} items={items} />
+              <TableList />
             )}
           </div>
         ) : (
