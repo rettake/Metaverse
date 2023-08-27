@@ -1,21 +1,20 @@
+import { useEthers } from "@usedapp/core";
 import { FunctionComponent, useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "../../../app/store";
 import Button from "../Button/Button";
 import styles from "./Modal.module.css";
 
 const Modal: FunctionComponent = () => {
-  const [showModal, setShowModal] = useState<boolean>(true);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
-  const { isRegister } = useSelector((state: RootState) => state.profile);
+  const { account } = useEthers();
 
   useEffect(() => {
-    if (isRegister) {
-      setShowModal(false);
-    } else {
+    if (!account) {
       setShowModal(true);
+    } else {
+      setShowModal(false);
     }
-  }, [isRegister]);
+  }, [account]);
 
   return (
     <div className={showModal ? styles.outer : styles.hidden}>

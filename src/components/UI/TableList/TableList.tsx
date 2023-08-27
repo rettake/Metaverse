@@ -1,14 +1,9 @@
-import React, { FunctionComponent, useState } from "react";
+import React, { FunctionComponent } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../app/store";
 import { setParticipants } from "../../../features/participants/participantsSlice";
 import ListItem from "./ListItem/ListItem";
 import styles from "./TableList.module.css";
-
-interface IProps {
-  profile: any;
-  items: any;
-}
 
 const TableList: FunctionComponent = () => {
   const dispatch = useDispatch()
