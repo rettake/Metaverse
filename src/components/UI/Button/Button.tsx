@@ -1,14 +1,14 @@
-import React, { FunctionComponent } from "react";
+import React, {ComponentProps, FunctionComponent} from "react";
 import styles from "./Button.module.css";
 
-interface IProps {
-  children: React.ReactNode;
-  disabled?: boolean;
-  type?: "button" | "submit" | "reset";
-  onClick?: () => void;
+interface IButtonProps extends ComponentProps<"button"> {
+  // children: React.ReactNode;
+  // disabled?: boolean;
+  // type?: "button" | "submit" | "reset";
+  // onClick?: () => void;
 }
 
-const Button: FunctionComponent<IProps> = ({
+const Button: FunctionComponent<IButtonProps> = ({
   children,
   disabled,
   type,
