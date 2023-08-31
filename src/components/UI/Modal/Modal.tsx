@@ -42,20 +42,12 @@ const Modal: FunctionComponent = () => {
               href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn"
               style={{
                 color: "#E75626",
+                textDecoration: "none",
               }}
             >
               Metamask browser extension
             </a>
           </Typography>
-          {/* <p className={styles.text}>
-            To work with our application, you have to install the{" "}
-            <a
-              href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn"
-              className={styles.link}
-            >
-              Metamask browser extension
-            </a>
-          </p> */}
           <Button onClick={() => setShowModal(false)}>Skip this step</Button>
         </div>
       ) : (
