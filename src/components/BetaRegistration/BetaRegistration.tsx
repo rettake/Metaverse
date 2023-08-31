@@ -113,7 +113,7 @@ const BetaRegistration: FunctionComponent<IProps> = ({ items, isLoading }) => {
               placeholder="We will display your email in participation list"
               {...register("email", { required: true })}
             />
-            <Button type="submit" disabled={account ? false : true}>
+            <Button type="submit" disabled={!account}>
               GET EARLY ACCESS
             </Button>
           </form>
