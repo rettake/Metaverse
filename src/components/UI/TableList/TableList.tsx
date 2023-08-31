@@ -4,6 +4,7 @@ import { RootState } from "../../../app/store";
 import { setParticipants } from "../../../features/participants/participantsSlice";
 import ListItem from "./ListItem/ListItem";
 import styles from "./TableList.module.css";
+import Typography from "../Typography/Typography";
 
 const TableList: FunctionComponent = () => {
   const dispatch = useDispatch()
@@ -19,9 +20,15 @@ const TableList: FunctionComponent = () => {
   return (
     <div>
       <div className={styles.header}>
-        <h3 className={styles.firstTitle}>NAME</h3>
-        <h3 className={styles.secondTitle}>EMAIL</h3>
-        <h3 className={styles.thirdTitle}>WALLET</h3>
+        <Typography type='h4' color="#fff" style={{width: "25%"}}>
+          NAME
+        </Typography>
+        <Typography type='h4' color="#fff" style={{width: "38%"}}>
+        EMAIL
+        </Typography>
+        <Typography type='h4' color="#fff" style={{width: "38%"}}>
+        WALLET
+        </Typography>
       </div>
       <div className={styles.item}>
         {profiles.map((item, index) => (

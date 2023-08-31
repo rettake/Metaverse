@@ -9,6 +9,7 @@ import { RootState } from "../../app/store";
 import { FunctionComponent } from "react";
 import TableList from "../UI/TableList/TableList";
 import Input from "../UI/Input/Input";
+import Typography from "../UI/Typography/Typography";
 
 type Inputs = {
   name: string;
@@ -63,32 +64,50 @@ const BetaRegistration: FunctionComponent<IProps> = ({ items, isLoading }) => {
   return (
     <section className={styles.section}>
       <div>
-        <h2 className={styles.title}>Beta test registration</h2>
-        <p className={styles.text}>
+        <Typography type="h2" color="#E75626" style={{ marginBottom: "18px" }}>
+          Beta test registration
+        </Typography>
+        <Typography
+          type="p"
+          color="#fff"
+          style={{ marginBottom: "36px", width: "420px" }}
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
-        </p>
+        </Typography>
         {isRegister ? (
           <div className={styles.form}>
-            <label htmlFor="">Name</label>
-            <p className={styles.text__info}>{profile?.username}</p>
-            <label htmlFor="">Email</label>
-            <p className={styles.text__info}>{profile?.email}</p>
+            <Typography type='h4' color='#fff' style={{marginBottom: "8px"}}>Name</Typography>
+            <Typography
+              type="h3"
+              color="#E75626"
+              style={{ marginBottom: "22px" }}
+            >
+              {profile?.username}
+            </Typography>
+            <Typography type='h4' color='#fff' style={{marginBottom: "8px"}}>Email</Typography>
+            <Typography
+              type="h3"
+              color="#E75626"
+              style={{ marginBottom: "22px" }}
+            >
+              {profile?.email}
+            </Typography>
             <Button type="submit" disabled>
               List me to the table
             </Button>
           </div>
         ) : (
           <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-            <label htmlFor="">Name</label>
+            <Typography type='h4' color='#fff' style={{marginBottom: "8px"}}>Name</Typography>
             <Input
               type="text"
               placeholder="We will display your name in participation list"
               {...register("name", { required: true })}
             />
-            <label htmlFor="">Email</label>
+            <Typography type='h4' color='#fff' style={{marginBottom: "8px"}}>Email</Typography>
             <Input
               type="email"
               placeholder="We will display your email in participation list"
@@ -103,19 +122,20 @@ const BetaRegistration: FunctionComponent<IProps> = ({ items, isLoading }) => {
       <div>
         {isRegister ? (
           <div>
-            <h2
+            <Typography
+              type="h2"
+              color="#fff"
               style={{
                 color: "white",
                 marginBottom: "35px",
               }}
-              className={styles.title}
             >
               Participation listing (enable only for participants)
-            </h2>
+            </Typography>
             {isLoading ? (
-              <h1 style={{ color: "white", textAlign: "center" }}>
+              <Typography type="p" color="#fff" style={{ textAlign: "center", fontSize: "50px" }}>
                 Loading...
-              </h1>
+              </Typography>
             ) : (
               <TableList />
             )}

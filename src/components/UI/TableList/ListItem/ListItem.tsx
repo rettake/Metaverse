@@ -4,9 +4,10 @@ import closeIcn from "../../../../assets/images/close.svg";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../../app/store";
 import { useNavigate } from "react-router";
+import Typography from "../../Typography/Typography";
 
 interface IProps {
-  id?: number
+  id?: number;
   username: string;
   email: string;
   address?: string;
@@ -24,30 +25,48 @@ const ListItem: FunctionComponent<IProps> = ({
 }) => {
   const navigate = useNavigate();
 
-  const { profile } = useSelector(
-    (state: RootState) => state.profile
-  );
+  const { profile } = useSelector((state: RootState) => state.profile);
 
   return (
-    <div style={username !== profile?.username ? {cursor: "pointer"} : {}} className={styles.container} onClick={() => (username !== profile?.username ? navigate(`user/${id}`) : null )}>
-      <h3
-        style={index === 0 && username === profile?.username ? { color: "#E75626" } : {}}
-        className={styles.firstRow}
+    <div
+      style={username !== profile?.username ? { cursor: "pointer" } : {}}
+      className={styles.container}
+      onClick={() =>
+        username !== profile?.username ? navigate(`user/${id}`) : null
+      }
+    >
+      <Typography
+        type="p_additional"
+        color={
+          index === 0 && username === profile?.username ? "#E75626" : "#fff"
+        }
+        style={{ width: "25%" }}
       >
         {username}
-      </h3>
-      <h3
-        style={index === 0 && username === profile?.username ? { color: "#E75626" } : {}}
-        className={styles.secondRow}
+      </Typography>
+      <Typography
+        type="p_additional"
+        color={
+          index === 0 && username === profile?.username ? "#E75626" : "#fff"
+        }
+        style={{ width: "38%" }}
       >
         {email}
-      </h3>
-      <h3
-        style={index === 0 && username === profile?.username ? { color: "#E75626" } : {}}
-        className={styles.thirdRow}
+      </Typography>
+      <Typography
+        type="p_additional"
+        color={
+          index === 0 && username === profile?.username ? "#E75626" : "#fff"
+        }
+        style={{
+          width: "38%",
+          whiteSpace: "nowrap",
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+        }}
       >
         {address}
-      </h3>
+      </Typography>
       {index === 0 && username === profile?.username ? (
         <img
           onClick={onDelete}

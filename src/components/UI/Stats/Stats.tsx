@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import styles from "./Stats.module.css";
+import Typography from "../Typography/Typography";
 
 interface IProps {
   count: string;
@@ -9,8 +10,8 @@ interface IProps {
 const Stats: FunctionComponent<IProps> = ({ count, title }) => {
   return (
     <div className={styles.main}>
-      <p className={styles.count}>{count}</p>
-      <h4 className={styles.title}>{title}</h4>
+      <Typography type="h3" color="#E75626" style={{marginTop: "8px", letterSpacing: "1px"}}>{count}</Typography>
+      <Typography type="h5" color="#fff" style={{marginTop: "12px"}}>{title}</Typography>
     </div>
   );
 };

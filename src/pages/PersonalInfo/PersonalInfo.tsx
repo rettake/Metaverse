@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { useGetParticipantByIdQuery } from "../../app/services/participants";
 import Layout from "../../components/Layout/Layout";
 import PersonalData from "../../components/PersonalData/PersonalData";
+import Typography from "../../components/UI/Typography/Typography";
 
 const PersonalInfo = () => {
   const param = useParams();
@@ -12,14 +13,13 @@ const PersonalInfo = () => {
     <main>
       <Layout>
         {isLoading ? (
-          <h1
-            style={{
-              textAlign: "center",
-              color: "white",
-            }}
+          <Typography
+            type="p"
+            color="#fff"
+            style={{ textAlign: "center", fontSize: "50px" }}
           >
             Loading...
-          </h1>
+          </Typography>
         ) : (
           <PersonalData
             name={data?.username}

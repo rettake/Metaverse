@@ -2,6 +2,7 @@ import { useEthers } from "@usedapp/core";
 import { Link } from "react-router-dom";
 import Button from "../../UI/Button/Button";
 import styles from "./Header.module.css";
+import Typography from "../../UI/Typography/Typography";
 
 const Header = () => {
   const { account, activateBrowserWallet } = useEthers();
@@ -9,10 +10,15 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Link to="/">
-        <div className={styles.logo}>LOGO</div>
+        <div className={styles.logo}>
+          <Typography type='h5' color='#fff'>LOGO</Typography>
+        </div>
       </Link>
       {account ? (
-        <h4 className={styles.account}>{account}</h4>
+        <Typography type="h5" color='#E75626'>
+          {account}
+        </Typography>
+        // <h4 className={styles.account}>{account}</h4>
       ) : (
         <Button onClick={() => activateBrowserWallet()}>
           Connect metamask

@@ -2,6 +2,7 @@ import { useEthers } from "@usedapp/core";
 import { FunctionComponent, useEffect, useState } from "react";
 import Button from "../Button/Button";
 import styles from "./Modal.module.css";
+import Typography from "../Typography/Typography";
 
 const Modal: FunctionComponent = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -20,8 +21,33 @@ const Modal: FunctionComponent = () => {
     <div className={showModal ? styles.outer : styles.hidden}>
       {showModal ? (
         <div className={styles.inner}>
-          <h2 className={styles.title}>metamask extention</h2>
-          <p className={styles.text}>
+          <Typography
+            type="h2"
+            color="#E75626"
+            style={{ marginBottom: "29px" }}
+          >
+            metamask extention
+          </Typography>
+          <Typography
+            type="p"
+            color="#fff"
+            style={{
+              marginBottom: "50px",
+              width: "320px",
+              textAlign: "center",
+            }}
+          >
+            To work with our application, you have to install the{" "}
+            <a
+              href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn"
+              style={{
+                color: "#E75626",
+              }}
+            >
+              Metamask browser extension
+            </a>
+          </Typography>
+          {/* <p className={styles.text}>
             To work with our application, you have to install the{" "}
             <a
               href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn"
@@ -29,7 +55,7 @@ const Modal: FunctionComponent = () => {
             >
               Metamask browser extension
             </a>
-          </p>
+          </p> */}
           <Button onClick={() => setShowModal(false)}>Skip this step</Button>
         </div>
       ) : (

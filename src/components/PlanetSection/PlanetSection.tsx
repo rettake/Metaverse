@@ -3,6 +3,7 @@ import styles from "./PlanetSection.module.css";
 import Planet from "../Planet/Planet";
 
 import pln_svg from '../../assets/images/planet_text_svg.svg'
+import Typography from "../UI/Typography/Typography";
 
 const stats = [
   {
@@ -31,15 +32,19 @@ const PlanetSection = () => {
           <Planet isMainPage={true}/>
           <img className={styles.image} src={pln_svg} alt="planet" />
         </div>
-        <p className={styles.text}>
+        <Typography
+          type="p"
+          color="#fff"
+          style={{ marginTop: "35px", width: "420px" }}
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
-        </p>
+        </Typography>
       </div>
       <div className={styles.aside}>
-        <h3>Roadmap stats</h3>
+        <Typography type="h3" color="#fff" style={{textAlign: "center"}}>Roadmap stats</Typography>
         <div>
           {stats.map((item, index) => (
             <Stats key={index} title={item.title} count={item.count} />

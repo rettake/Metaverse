@@ -10,16 +10,6 @@
   left: 600px;
 }
 
-.title {
-  color: #FFF;
-  font-family: Bebas Neue;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-  margin-bottom: 48px;
-}
-
 .list {
   display: flex;
   justify-content: space-between;

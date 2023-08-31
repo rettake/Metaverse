@@ -26,35 +26,3 @@
   z-index: 10000;
   margin: 0 auto;
 }
-
-.title {
-  color: #E75626;
-  font-family: Bebas Neue;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%; 
-  margin-bottom: 29px;
-}
-
-.text {
-  color: #FFF;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%; 
-  margin-bottom: 50px;
-  width: 320px;
-}
-
-.text a {
-  color: #E75626;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
-  text-decoration: none;
-}

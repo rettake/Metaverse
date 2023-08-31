@@ -10,24 +10,3 @@
 .main:last-child {
   border-bottom: none;
 }
-
-.title {
-  margin-top: 12px;
-  color: #FFF;
-  font-family: Bebas Neue;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%; /* 21.6px */
-}
-
-.count {
-  color: #E75626;
-  font-family: Bebas Neue;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%; /* 33.6px */
-  letter-spacing: 1px;
-  margin-top: 8px;
-}
