@@ -1,6 +1,6 @@
 import { FunctionComponent, useEffect } from "react";
 import styles from "./Planet.module.css";
-import planeta from "../../../assets/images/planeta.png";
+import planet from "../../../assets/images/planet.png";
 import BlockTimer from "./CircleTimer/BlockTimer/BlockTimer";
 
 interface IProps {
@@ -52,7 +52,7 @@ const Planet: FunctionComponent<IProps> = ({isMainPage}) => {
       </svg>
 
       <div className={styles.ellipse__outlined}>
-        <img className={styles.image} src={planeta} alt="planet" />
+        <img className={styles.image} src={planet} alt="planet" />
       </div>
     </div>
   );
