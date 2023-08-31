@@ -1,7 +1,7 @@
 import { useGetAllParticipantsQuery } from "../../shared/services/participants";
-import BetaRegistration from "../../components/BetaRegistration/BetaRegistration";
+import BetaRegistration from "../../entities/BetaRegistration/BetaRegistration";
 import Layout from "../../widgets/Layout/Layout";
-import PlanetSection from "../../components/PlanetSection/PlanetSection";
+import PlanetSection from "../../widgets/PlanetSection/PlanetSection";
 
 const HomePage = () => {
   const { data, isLoading } = useGetAllParticipantsQuery();

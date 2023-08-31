@@ -1,6 +1,6 @@
 import Stats from "./Stats/Stats";
 import styles from "./PlanetSection.module.css";
-import Planet from "../../widgets/Planet/Planet";
+import Planet from "./Planet/Planet";
 
 import pln_svg from '../../assets/images/planet_text_svg.svg'
 import Typography from "../../shared/UI/Typography/Typography";

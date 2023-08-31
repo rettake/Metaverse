@@ -22,18 +22,6 @@
   filter: blur(11px);
 }
 
-.text__ellipse {
-  z-index: 100;
-  width: 320px;
-  height: 320px;
-  position: absolute;
-  top: -46px;
-  left: 584px;
-  border-radius: 526px;
-  background-image: url('../../assets/images/planet_text_svg.svg');
-  visibility: hidden;
-}
-
 .ellipse::before {
   content: " ";
   z-index: 2;

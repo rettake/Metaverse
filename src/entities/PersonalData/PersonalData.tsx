@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import Planet from "../../widgets/Planet/Planet";
+import Planet from "../../widgets/PlanetSection/Planet/Planet";
 import PersonalListItem from "./PersonalListItem/PersonalListItem";
 import styles from "./PersonalData.module.css";
 import Typography from "../../shared/UI/Typography/Typography";

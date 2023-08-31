@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router";
 import { useGetParticipantByIdQuery } from "../../shared/services/participants";
 import Layout from "../../widgets/Layout/Layout";
-import PersonalData from "../../components/PersonalData/PersonalData";
+import PersonalData from "../../entities/PersonalData/PersonalData";
 import Typography from "../../shared/UI/Typography/Typography";
 
 const PersonalInfo = () => {

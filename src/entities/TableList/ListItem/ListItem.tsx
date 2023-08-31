@@ -1,10 +1,10 @@
 import { FunctionComponent } from "react";
 import styles from "./ListItem.module.css";
-import closeIcn from "../../../../assets/images/close.svg";
+import closeIcn from "../../../assets/images/close.svg"
 import { useSelector } from "react-redux";
-import { RootState } from "../../../../app/store";
+import { RootState } from "../../../app/store";
 import { useNavigate } from "react-router";
-import Typography from "../../../../shared/UI/Typography/Typography";
+import Typography from "../../../shared/UI/Typography/Typography";
 
 interface IProps {
   id?: number;
