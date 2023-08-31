@@ -1,14 +1,7 @@
 import React, {ComponentProps, FunctionComponent} from "react";
 import styles from "./Button.module.css";
 
-interface IButtonProps extends ComponentProps<"button"> {
-  // children: React.ReactNode;
-  // disabled?: boolean;
-  // type?: "button" | "submit" | "reset";
-  // onClick?: () => void;
-}
-
-const Button: FunctionComponent<IButtonProps> = ({
+const Button: FunctionComponent<ComponentProps<"button">> = ({
   children,
   disabled,
   type,
