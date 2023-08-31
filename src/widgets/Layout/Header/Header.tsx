@@ -18,7 +18,6 @@ const Header = () => {
         <Typography type="h5" color='#E75626'>
           {account}
         </Typography>
-        // <h4 className={styles.account}>{account}</h4>
       ) : (
         <Button onClick={() => activateBrowserWallet()}>
           Connect metamask

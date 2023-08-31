@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect } from "react";
+import { FunctionComponent, useEffect } from "react";
 import styles from "./Planet.module.css";
 import planeta from "../../../assets/images/planeta.png";
 import BlockTimer from "./CircleTimer/BlockTimer/BlockTimer";
