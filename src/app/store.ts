@@ -1,7 +1,7 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 // import auth from "../features/auth/authSlice";
 // import employees from "../features/employees/employeesSlice";
-import { api } from "./services/api";
+import { api } from "../shared/services/api";
 import participants from "../features/participants/participantsSlice";
 import profiles from "../features/participants/participantsSlice";
 import profile from "../features/profile/profileSlice";

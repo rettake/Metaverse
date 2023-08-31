@@ -2,7 +2,7 @@ import React, { FunctionComponent } from "react";
 import Planet from "../Planet/Planet";
 import PersonalListItem from "./PersonalListItem/PersonalListItem";
 import styles from "./PersonalData.module.css";
-import Typography from "../UI/Typography/Typography";
+import Typography from "../../shared/UI/Typography/Typography";
 
 interface IProps {
   name?: string;

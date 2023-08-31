@@ -4,7 +4,7 @@ import { RootState } from "../../../app/store";
 import { setParticipants } from "../../../features/participants/participantsSlice";
 import ListItem from "./ListItem/ListItem";
 import styles from "./TableList.module.css";
-import Typography from "../../UI/Typography/Typography";
+import Typography from "../../../shared/UI/Typography/Typography";
 
 const TableList: FunctionComponent = () => {
   const dispatch = useDispatch()

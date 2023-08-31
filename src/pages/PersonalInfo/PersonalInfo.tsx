@@ -1,9 +1,9 @@
 import React from "react";
 import { useParams } from "react-router";
-import { useGetParticipantByIdQuery } from "../../app/services/participants";
+import { useGetParticipantByIdQuery } from "../../shared/services/participants";
 import Layout from "../../components/Layout/Layout";
 import PersonalData from "../../components/PersonalData/PersonalData";
-import Typography from "../../components/UI/Typography/Typography";
+import Typography from "../../shared/UI/Typography/Typography";
 
 const PersonalInfo = () => {
   const param = useParams();

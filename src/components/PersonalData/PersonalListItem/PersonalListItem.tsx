@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import styles from "./PersonalListItem.module.css";
-import Typography from "../../UI/Typography/Typography";
+import Typography from "../../../shared/UI/Typography/Typography";
 
 interface IProps {
   title?: string;

@@ -1,15 +1,15 @@
 import { useEthers } from "@usedapp/core";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
-import Button from "../UI/Button/Button";
+import Button from "../../shared/UI/Button/Button";
 import styles from "./BetaRegistration.module.css";
 import { setIsRegister, setProfile } from "../../features/profile/profileSlice";
 import { setParticipants } from "../../features/participants/participantsSlice";
 import { RootState } from "../../app/store";
 import { FunctionComponent } from "react";
 import TableList from "./TableList/TableList";
-import Input from "../UI/Input/Input";
-import Typography from "../UI/Typography/Typography";
+import Input from "../../shared/UI/Input/Input";
+import Typography from "../../shared/UI/Typography/Typography";
 
 type Inputs = {
   name: string;

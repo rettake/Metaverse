@@ -1,8 +1,8 @@
 import { useEthers } from "@usedapp/core";
 import { Link } from "react-router-dom";
-import Button from "../../UI/Button/Button";
+import Button from "../../../shared/UI/Button/Button";
 import styles from "./Header.module.css";
-import Typography from "../../UI/Typography/Typography";
+import Typography from "../../../shared/UI/Typography/Typography";
 
 const Header = () => {
   const { account, activateBrowserWallet } = useEthers();

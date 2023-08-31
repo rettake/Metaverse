@@ -1,5 +1,5 @@
 import { RootState } from "./../../app/store";
-import { participantsApi } from "../../app/services/participants";
+import { participantsApi } from "../../shared/services/participants";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 type IProfile = {

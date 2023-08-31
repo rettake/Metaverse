@@ -3,7 +3,7 @@ import styles from "./PlanetSection.module.css";
 import Planet from "../Planet/Planet";
 
 import pln_svg from '../../assets/images/planet_text_svg.svg'
-import Typography from "../UI/Typography/Typography";
+import Typography from "../../shared/UI/Typography/Typography";
 
 const stats = [
   {

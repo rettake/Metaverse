@@ -1,4 +1,4 @@
-import { useGetAllParticipantsQuery } from "../../app/services/participants";
+import { useGetAllParticipantsQuery } from "../../shared/services/participants";
 import BetaRegistration from "../../components/BetaRegistration/BetaRegistration";
 import Layout from "../../components/Layout/Layout";
 import PlanetSection from "../../components/PlanetSection/PlanetSection";

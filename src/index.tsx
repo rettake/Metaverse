@@ -10,7 +10,7 @@ import { getDefaultProvider } from "ethers";
 import "./index.css";
 import HomePage from "./pages/HomePage/HomePage";
 import PersonalInfo from "./pages/PersonalInfo/PersonalInfo";
-import Modal from "./components/UI/Modal/Modal";
+import Modal from "./shared/UI/Modal/Modal";
 
 const config: Config = {
   readOnlyChainId: Mainnet.chainId,
