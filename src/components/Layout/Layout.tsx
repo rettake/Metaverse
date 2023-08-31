@@ -1,15 +1,14 @@
-import React, { FunctionComponent, PropsWithChildren } from 'react'
-import Header from './Header/Header'
-import styles from './Layout.module.css'
+import React, { FunctionComponent, PropsWithChildren } from "react";
+import Header from "./Header/Header";
+import styles from "./Layout.module.css";
 
-
-const Layout: FunctionComponent<PropsWithChildren> = ({children}) => {
+const Layout: FunctionComponent<PropsWithChildren> = ({ children }) => {
   return (
     <div className={styles.layout}>
       <Header />
-      {children}
+      <main>{children}</main>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

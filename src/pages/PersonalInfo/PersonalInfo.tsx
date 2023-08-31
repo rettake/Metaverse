@@ -10,25 +10,23 @@ const PersonalInfo = () => {
   const { data, isLoading } = useGetParticipantByIdQuery(param?.id || "");
 
   return (
-    <main>
-      <Layout>
-        {isLoading ? (
-          <Typography
-            type="p"
-            color="#fff"
-            style={{ textAlign: "center", fontSize: "50px" }}
-          >
-            Loading...
-          </Typography>
-        ) : (
-          <PersonalData
-            name={data?.username}
-            email={data?.email}
-            wallet={data?.address}
-          />
-        )}
-      </Layout>
-    </main>
+    <Layout>
+      {isLoading ? (
+        <Typography
+          type="p"
+          color="#fff"
+          style={{ textAlign: "center", fontSize: "50px" }}
+        >
+          Loading...
+        </Typography>
+      ) : (
+        <PersonalData
+          name={data?.username}
+          email={data?.email}
+          wallet={data?.address}
+        />
+      )}
+    </Layout>
   );
 };
 

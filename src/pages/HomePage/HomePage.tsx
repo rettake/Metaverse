@@ -7,12 +7,10 @@ const HomePage = () => {
   const { data, isLoading } = useGetAllParticipantsQuery();
 
   return (
-    <main>
-      <Layout>
-        <PlanetSection />
-        <BetaRegistration items={data?.items} isLoading={isLoading} />
-      </Layout>
-    </main>
+    <Layout>
+      <PlanetSection />
+      <BetaRegistration items={data?.items} isLoading={isLoading} />
+    </Layout>
   );
 };
 
