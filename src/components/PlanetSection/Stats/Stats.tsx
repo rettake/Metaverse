@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import styles from "./Stats.module.css";
-import Typography from "../Typography/Typography";
+import Typography from "../../UI/Typography/Typography";
 
 interface IProps {
   count: string;

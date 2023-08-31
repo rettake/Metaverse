@@ -1,4 +1,4 @@
-import Stats from "../UI/Stats/Stats";
+import Stats from "./Stats/Stats";
 import styles from "./PlanetSection.module.css";
 import Planet from "../Planet/Planet";
 

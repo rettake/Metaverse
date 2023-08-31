@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import Planet from "../Planet/Planet";
-import PersonalListItem from "../UI/PersonalListItem/PersonalListItem";
+import PersonalListItem from "./PersonalListItem/PersonalListItem";
 import styles from "./PersonalData.module.css";
 import Typography from "../UI/Typography/Typography";
 

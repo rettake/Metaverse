@@ -7,7 +7,7 @@ import { setIsRegister, setProfile } from "../../features/profile/profileSlice";
 import { setParticipants } from "../../features/participants/participantsSlice";
 import { RootState } from "../../app/store";
 import { FunctionComponent } from "react";
-import TableList from "../UI/TableList/TableList";
+import TableList from "./TableList/TableList";
 import Input from "../UI/Input/Input";
 import Typography from "../UI/Typography/Typography";
 

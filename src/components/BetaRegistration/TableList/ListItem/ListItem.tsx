@@ -4,7 +4,7 @@ import closeIcn from "../../../../assets/images/close.svg";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../../app/store";
 import { useNavigate } from "react-router";
-import Typography from "../../Typography/Typography";
+import Typography from "../../../UI/Typography/Typography";
 
 interface IProps {
   id?: number;
