@@ -2,6 +2,6 @@
   position: relative;
   background-color: #171719;
   min-height: 100vh;
-  max-width: 1440px;
+  width: 100%;
   overflow: hidden;
 }
