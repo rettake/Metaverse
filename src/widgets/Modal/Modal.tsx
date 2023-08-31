@@ -1,8 +1,8 @@
 import { useEthers } from "@usedapp/core";
 import { FunctionComponent, useEffect, useState } from "react";
-import Button from "../Button/Button";
+import Button from "../../shared/UI/Button/Button";
 import styles from "./Modal.module.css";
-import Typography from "../Typography/Typography";
+import Typography from "../../shared/UI/Typography/Typography";
 
 const Modal: FunctionComponent = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
