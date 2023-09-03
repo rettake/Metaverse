@@ -1,13 +1,7 @@
 import { RootState } from "./../../app/store";
 import { participantsApi } from "../../shared/services/participants";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-
-type IProfile = {
-  username: string;
-  email: string;
-  address?: string;
-  id?: number
-};
+import { IProfile } from "../types/Profile";
 
 interface IInitialState {
   participants: any | null;

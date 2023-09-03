@@ -1,3 +1,4 @@
+import { IProfile } from "../types/Profile";
 import { RootState } from "./../../app/store";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
@@ -5,13 +6,6 @@ interface IInitialState {
   profile: IProfile | null;
   isRegister: boolean;
 }
-
-type IProfile = {
-  username: string;
-  email: string;
-  address?: string;
-  id?: number
-};
 
 const initialState: IInitialState = {
   profile: null,
