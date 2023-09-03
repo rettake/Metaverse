@@ -10,6 +10,18 @@ interface ICircleTimerProps extends ComponentProps<"svg"> {
   strokeWidth: number;
 }
 
+interface IAnimatedCircle {
+  className: string;
+  cx: number;
+  cy: number;
+  duration: number;
+  loop: boolean;
+  r: number;
+  stroke: string;
+  strokeWidth: number;
+  transform: string;
+}
+
 const CircleTimer: FunctionComponent<ICircleTimerProps> = ({
   duration,
   fillColor,
@@ -31,7 +43,7 @@ const CircleTimer: FunctionComponent<ICircleTimerProps> = ({
   }
 `;
   
-const AnimatedCircle = styled.circle<any>`
+const AnimatedCircle = styled.circle<IAnimatedCircle>`
   stroke-dasharray: ${({ r }) => 2 * Math.PI * r};
   animation: ${circleFill} ${({ duration }) => `${duration}s`} linear;
   animation-fill-mode: forwards;
