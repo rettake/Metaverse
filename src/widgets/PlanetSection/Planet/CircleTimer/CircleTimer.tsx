@@ -1,4 +1,3 @@
-//@ts-nocheck
 import { ComponentProps, FunctionComponent } from "react";
 import styled, { keyframes } from "styled-components";
 
@@ -23,7 +22,7 @@ const CircleTimer: FunctionComponent<ICircleTimerProps> = ({
   const center = size / 2 + strokeWidth / 2;
   const radius = size / 2;
 
-  const circleFill = ({ r }) => keyframes`
+  const circleFill = ({ r }: {r: number}) => keyframes`
   0% {
     stroke-dashoffset: ${2 * Math.PI * r}};
   }
@@ -31,14 +30,8 @@ const CircleTimer: FunctionComponent<ICircleTimerProps> = ({
     stroke-dashoffset: 0;
   }
 `;
-
-interface IAnimatedCircle {
-  circleFill: any;
-  duration: number;
-  loop: boolean;
-}
   
-const AnimatedCircle = styled.circle<IAnimatedCircle>`
+const AnimatedCircle = styled.circle<any>`
   stroke-dasharray: ${({ r }) => 2 * Math.PI * r};
   animation: ${circleFill} ${({ duration }) => `${duration}s`} linear;
   animation-fill-mode: forwards;
